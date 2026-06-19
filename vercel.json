@@ -1,0 +1,6 @@
+{
+  "installCommand": "cd library-landing && npm install",
+  "buildCommand": "cd library-landing && npm run build",
+  "outputDirectory": "library-landing/dist",
+  "framework": "vite"
+}
