@@ -2,6 +2,7 @@ import {
   ComponentPropsWithoutRef,
   ElementType,
   Fragment,
+  ReactElement,
   ReactNode,
   RefObject,
   createElement,
@@ -23,7 +24,7 @@ type MotionProps = {
 
 type MotionComponent<T extends ElementType> = (
   props: ComponentPropsWithoutRef<T> & MotionProps,
-) => JSX.Element;
+) => ReactElement;
 
 function createMotionComponent<T extends ElementType>(tag: T): MotionComponent<T> {
   return function MotionElement({
@@ -62,7 +63,7 @@ export function AnimatePresence({ children }: { children: ReactNode; initial?: b
 }
 
 export function useInView(
-  ref: RefObject<Element>,
+  ref: RefObject<Element | null>,
   options: { once?: boolean; amount?: number } = {},
 ) {
   const [inView, setInView] = useState(false);
