@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibraSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&family=Marck+Script&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { manrope: ['Manrope', 'sans-serif'], italiana: ['Italiana', 'serif'], marck: ['Marck Script', 'cursive'] } } } };
+    </script>
+    <style>
+      body { font-family: 'Manrope', sans-serif; background: #07111d; }
+      .glass { backdrop-filter: blur(16px); background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 18px 35px rgba(0,0,0,0.22); }
+      .fade-in { animation: fadeIn 900ms ease-out; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#07111d] text-white">
+    <section class="relative min-h-screen overflow-hidden">
+      <video class="absolute inset-0 h-full w-full object-cover" autoplay muted loop playsinline src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_091828_e240eb17-6edc-4129-ad9d-98678e3fd238.mp4"></video>
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,29,0.45),rgba(7,17,29,0.72),rgba(7,17,29,0.88))]"></div>
+
+      <main class="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 text-center md:px-10 lg:px-14">
+        <div class="fade-in mx-auto flex w-full max-w-5xl flex-col items-center">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="mb-12 text-white" aria-label="Library icon">
+            <path d="M20 18C20 14.6863 22.6863 12 26 12H54C57.3137 12 60 14.6863 60 18V58C60 61.3137 57.3137 64 54 64H26C22.6863 64 20 61.3137 20 58V18Z" stroke="currentColor" stroke-width="2" />
+            <path d="M28 27H52" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M28 37H46" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M28 47H40" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M16 68L40 52L64 68" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          <p class="mb-6 text-xs uppercase tracking-[0.35em] text-white/70">AI-POWERED LIBRARY EXPERIENCE</p>
+          <h1 class="max-w-4xl text-4xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">We Built This Platform To Transform Traditional Libraries Into Intelligent Knowledge Ecosystems Powered By Automation And Accessibility</h1>
+          <p class="mt-6 font-italiana text-3xl text-white/90 md:text-4xl">LibraSphere</p>
+
+          <div class="mt-8 flex max-w-4xl flex-col gap-5 text-base text-white/80 md:text-lg">
+            <p>Managing Books, Borrowers, And Records Should Not Require Endless Spreadsheets And Manual Tracking. We Created An Intelligent Platform That Organizes Everything Automatically.</p>
+            <p>Libraries Exist To Inspire Learning And Discovery. Let Our Technology Handle Inventory, Borrowing, And Reporting While You Focus On Building A Strong Reading Community.</p>
+          </div>
+
+          <div class="mt-10 flex w-full flex-wrap items-stretch justify-center gap-5">
+            <article class="glass min-w-[220px] flex-1 rounded-2xl px-8 py-6 text-left">
+              <p class="text-3xl font-semibold text-white">10,000+</p>
+              <p class="mt-1 text-sm uppercase tracking-[0.18em] text-white/70">Books Available</p>
+            </article>
+            <article class="glass min-w-[220px] flex-1 rounded-2xl px-8 py-6 text-left">
+              <p class="text-3xl font-semibold text-white">2,500+</p>
+              <p class="mt-1 text-sm uppercase tracking-[0.18em] text-white/70">Active Members</p>
+            </article>
+            <article class="glass min-w-[220px] flex-1 rounded-2xl px-8 py-6 text-left">
+              <p class="text-3xl font-semibold text-white">500+</p>
+              <p class="mt-1 text-sm uppercase tracking-[0.18em] text-white/70">Daily Borrows</p>
+            </article>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <button class="rounded-full bg-white px-6 py-3 font-medium text-[#202A36] transition-colors hover:bg-gray-200">Browse Catalog</button>
+            <button class="rounded-full bg-[#4F8EF7] px-6 py-3 font-medium text-white transition-colors hover:bg-[#3E79DD]">Get Started</button>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script>
+      document.documentElement.style.fontFamily = 'Manrope, sans-serif';
+    </script>
+  </body>
+</html>

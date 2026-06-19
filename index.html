@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-panel">
+        <p class="eyebrow">Smart Library</p>
+        <h1>Library Management System</h1>
+        <p class="hero-copy">
+          Add books, search the catalogue, track borrowed items, and manage your library
+          collection from one polished dashboard.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Add Books</span>
+          <span class="chip">Search & Filter</span>
+          <span class="chip">Borrow / Return</span>
+        </div>
+        <div class="mini-card">
+          <p>Quick Guide</p>
+          <strong>Fill the form, click Add Book, then use the action buttons to manage items.</strong>
+        </div>
+      </section>
+
+      <section class="dashboard-card">
+        <header class="card-header">
+          <div>
+            <p class="eyebrow">Live Dashboard</p>
+            <h2>Manage Books</h2>
+          </div>
+          <span class="badge">Frontend Ready</span>
+        </header>
+
+        <form id="bookForm" class="book-form">
+          <label>
+            Book Title
+            <input type="text" id="titleInput" placeholder="Enter book title" required />
+          </label>
+          <label>
+            Author
+            <input type="text" id="authorInput" placeholder="Enter author name" required />
+          </label>
+          <button type="submit" class="btn primary">Add Book</button>
+        </form>
+
+        <div class="action-row">
+          <button class="btn secondary" id="viewBtn">View All</button>
+          <button class="btn secondary" id="searchBtn">Search</button>
+          <button class="btn secondary" id="saveBtn">Save</button>
+          <button class="btn secondary" id="loadBtn">Load</button>
+        </div>
+
+        <label class="search-box">
+          Search by title
+          <input type="text" id="searchInput" placeholder="Type a book name" />
+        </label>
+
+        <div class="status-box" id="statusBox" aria-live="polite">No books yet. Add your first title.</div>
+
+        <div class="book-grid" id="bookGrid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
