@@ -32,7 +32,7 @@ interface Activity {
 const VIDEO_SRC =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4';
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:8000';
 const API_URL = `${API_BASE}/books`;
 
 const navItems = ['Dashboard', 'Books', 'Borrowed', 'Search'];
@@ -355,6 +355,7 @@ export default function App() {
       }
 
       const updatedBook = (await response.json()) as Book;
+      setError('');
       setBooks((currentBooks) =>
         currentBooks.map((item) => (item.id === id ? updatedBook : item)),
       );
@@ -389,6 +390,7 @@ export default function App() {
         throw new Error(`Could not delete book. Backend returned ${response.status}`);
       }
 
+      setError('');
       setBooks((currentBooks) => currentBooks.filter((book) => book.id !== id));
     } catch (caughtError) {
       setError(
